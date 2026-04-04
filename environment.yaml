@@ -1,0 +1,17 @@
+name: ravit
+channels:
+  - pytorch
+  - nvidia
+  - defaults
+dependencies:
+  - python=3.9
+  - pytorch=2.1.0
+  - torchvision=0.16.0
+  - cudatoolkit=11.8
+  - pip:
+    - pycocotools
+    - lvis
+    - pyyaml
+    - timm  # 用于快速获取各种 ViT 变体
+    - ftfy  # CLIP 依赖
+    - regex

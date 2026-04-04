@@ -1,0 +1,16 @@
+# ViLD Baseline Configuration
+model:
+  type: "ViLD"
+  backbone: "resnet50"
+  ensemble_on: True
+  distill_weight: 1.0
+
+dataset:
+  name: "lvis"
+  train_ann: "lvis_v1_train.json"
+  val_ann: "lvis_v1_val.json"
+
+train:
+  batch_size: 16
+  lr: 0.02
+  total_iters: 180000

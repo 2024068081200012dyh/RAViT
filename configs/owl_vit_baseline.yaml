@@ -1,0 +1,15 @@
+# OWL-ViT Baseline Configuration
+model:
+  type: "OWL-ViT"
+  backbone: "vit_base_patch16"
+  image_size: 768 # OWL-ViT usually uses larger input
+  logit_scale: 100.0
+
+dataset:
+  name: "lvis"
+  top_k_predictions: 100
+
+train:
+  batch_size: 8
+  lr: 0.00001
+  scheduler: "cosine"
